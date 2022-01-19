@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+
+@model GradeWeightsModel
+
+<h2>Grade Weights (Approximate):</h2>
+<!--So we are able to submit it-->
+<!--We can have a get to get the information and post to send the information-->
+<form method="post">
+    <label>Assignments:</label>
+    <!--the asp-for allows it to do that from the helpers from viewimports-->
+    <input type="number" min="0" max="100"id="Assignments" asp-for="Assignments"/><br />
+    <label>Group Project:</label>
+    <input type="number" min="0" max="100"id="Group" asp-for="Group"/><br />
+    <label>Quizzes: </label>
+    <input type="number" min="0" max="100"id="Quizzes"  asp-for="Quizzes"/><br />
+    <label>Exams:</label>
+    <input type="number" min="0" max="100"id="Exams" asp-for="Exams"/><br />
+    <label>Intex:</label>
+    <input type="number" min="0" max="100"id="Intex" asp-for="Intex"/><br />
+    <input id="btnSend" type="submit" value="output" />
+
+    <div asp-validation-summary="All"></div>
+</form>
